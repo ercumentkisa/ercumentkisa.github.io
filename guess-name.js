@@ -134,7 +134,7 @@ function checkGameStatus() {
     
     if (!hasBalloonsLeft) {
         // Won the game!
-        showMessage('🎉 Tebrikler! 🎉 Bebeğin ismi: ' + secretName + ' ⛰️☀️', 'success');
+        showMessage('🎉 Tebrikler! 🎉<br>Bebeğin ismi: ' + secretName + ' ⛰️☀️', 'success');
         disableAllKeys();
         createConfetti();
     } else if (attemptsLeft === 0) {
@@ -147,7 +147,7 @@ function checkGameStatus() {
 
 // Show message
 function showMessage(text, type) {
-    messageElement.textContent = text;
+    messageElement.innerHTML = text;
     messageElement.className = 'message ' + type;
 }
 
